@@ -1,12 +1,10 @@
 name: Auto-run Jupyter Notebook
 
 on:
-    push:
-      branches:
-        - main    # Runs the workflow when there's a push to the main branch
-    pull_request:
-      branches:
-        - main  # Allows manual trigger
+  push:
+    paths:
+      - '**.ipynb'  # Runs only if any Jupyter Notebook file is modified
+  workflow_dispatch:  # Allows manual trigger
 
 jobs:
   run-notebook:
@@ -33,7 +31,7 @@ jobs:
           jupyter nbconvert --to notebook --execute lab_5_Saksham_Bali.ipynb --output output.ipynb
 
       - name: Upload Notebook Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: executed-notebook
           path: output.ipynb
