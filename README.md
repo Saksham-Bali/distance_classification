@@ -21,3 +21,5 @@ Screenshots of dashboard of the WANDB:
 input images:
 ![input image 1](Dr_Shashi_Tharoor.jpg)
 ![input image 2](Plaksha_Faculty.jpg)
+
+output images are contained in the output folder.
