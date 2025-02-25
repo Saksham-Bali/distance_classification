@@ -1,16 +1,25 @@
 name: Run Tests
 on: [push]
+
 jobs:
-    test:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v3
-        - name: Set up Python
-          uses: actions/setup-python@v4
-          with:
-              python-version: '3.11'
-        - name: Install dependencies
-          run: |
-              pip install numpy pandas scikit-learn matplotlib opencv-python
-        - name: Run test script
-          run: python distance_classification.py
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install System Dependencies for OpenCV
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-glx libglib2.0-0
+
+      - name: Install Python Dependencies
+        run: |
+          pip install numpy pandas scikit-learn matplotlib opencv-python
+
+      - name: Run Test Script
+        run: python distance_classification.py
