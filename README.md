@@ -9,4 +9,6 @@ Summary of findings and learnings from the project:
 
 
 Screenshots of dashboard of the WANDB:
-![shi](Dr_Shashi_Tharoor.jpg)
+![dashboard screeshot 1](image-1.png)
+![dashboard screenshot 2](image-2.png)
+![dashboard screenshot 3](image-3.png)
