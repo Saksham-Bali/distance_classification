@@ -9,6 +9,4 @@ Summary of findings and learnings from the project:
 
 
 Screenshots of dashboard of the WANDB:
-![alt text](image.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
+("C:\Users\saksh\OneDrive\Desktop\mlpr\lab 5\distance_classification\image.png")
