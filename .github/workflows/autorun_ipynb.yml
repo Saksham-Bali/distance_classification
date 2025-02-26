@@ -31,7 +31,7 @@ jobs:
           jupyter nbconvert --to notebook --execute lab_5_Saksham_Bali.ipynb --output output.ipynb
 
       - name: Upload Notebook Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: executed-notebook
           path: output.ipynb
